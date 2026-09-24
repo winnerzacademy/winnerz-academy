@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winnerz Academy | Elite Academic Mentorship &amp; Doubt Atelier</title>
+
+  <!-- Google Fonts: Editorial Serif + Technical Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#030d09',
+              900: '#04150e',
+              850: '#071f15',
+              800: '#0b2a1e',
+              700: '#113a2a',
+              600: '#194c38'
+            },
+            champagne: {
+              600: '#a37b1d',
+              500: '#c59a2a',
+              450: '#d4af37',
+              400: '#e5c358',
+              300: '#f3cf7a',
+              200: '#fae3a6',
+              100: '#fdf3d6',
+              50: '#fffbf0'
+            },
+            parchment: {
+              50: '#fdfcf9',
+              100: '#f9f7f2',
+              200: '#f0ece1',
+              300: '#e3ddd0'
+            }
+          },
+          fontFamily: {
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          boxShadow: {
+            'atelier-luxury': '0 30px 60px -15px rgba(3, 13, 9, 0.45), 0 0 1px 1px rgba(212, 175, 55, 0.25)',
+            'gold-halo': '0 0 35px -5px rgba(212, 175, 55, 0.35)',
+            'subtle-card': '0 15px 35px -10px rgba(0,0,0,0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    ::selection {
+      background: #d4af37;
+      color: #030d09;
+    }
+    
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fae3a6 0%, #d4af37 50%, #a37b1d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Infinite Luxury Announcement Marquee */
+    @keyframes luxuryMarquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex;
+      width: 200%;
+      animation: luxuryMarquee 26s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Architectural Grid Accent */
+    .architect-grid {
+      background-image: linear-gradient(to right, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body class="bg-parchment-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+  <!-- TOP LUXURY TICKER / STATUS STRIP -->
+  <aside aria-label="Special Season Notice" class="bg-obsidian-950 text-parchment-100 border-b border-champagne-400/20 text-xs py-2 px-4 sm:px-8 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 font-mono text-[11px] tracking-wider uppercase">
+      
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-champagne-400/15 text-champagne-300 border border-champagne-400/30 font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-champagne-400 animate-ping"></span>
+          EXAM SEASON SPECIAL
+        </span>
+        <span class="text-slate-300 hidden md:inline tracking-normal font-sans font-medium">
+          Stay Ahead. Stay Confident &bull; Targeted 1-on-1 Mentorship
+        </span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <span class="text-champagne-200 hidden sm:inline">Pay Only for What You Need</span>
+        <a href="tel:6291374919" class="text-champagne-300 hover:text-white font-bold tracking-widest flex items-center gap-1.5 transition-colors">
+          <i data-lucide="phone" class="w-3 h-3 text-champagne-400"></i>
+          <span>6291374919</span>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- FLOATING EDITORIAL NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-obsidian-900/95 backdrop-blur-xl border-b border-champagne-400/20 shadow-atelier-luxury transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-24">
+        
+        <!-- Authentic Vector Logo Emblem -->
+        <a href="#" class="flex items-center gap-4 group">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 relative transition-transform duration-500 group-hover:scale-105">
+            <svg viewBox="0 0 240 240" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Pentagon Framing with 5 Pillars -->
+              <polygon points="120,22 214,88 178,198 62,198 26,88" stroke="#d4af37" stroke-width="3" stroke-linejoin="round" fill="#04150e" fill-opacity="0.65"/>
+              
+              <!-- Node 1: Academics (Top) -->
+              <circle cx="120" cy="22" r="15" fill="#0b2a1e" stroke="#d4af37" stroke-width="2.5"/>
+              <path d="M113 18c2-1 4.5-1 7 0 2.5-1 5-1 7 0v6c-2-1-4.5-1-7 0-2.5-1-5-1-7 0v-6z" fill="#f3cf7a"/>
+
+              <!-- Node 2: Career Guidance (Top Right) -->
+              <circle cx="214" cy="88" r="15" fill="#0b2a1e" stroke="#d4af37" stroke-width="2.5"/>
+              <circle cx="214" cy="88" r="6" stroke="#f3cf7a" stroke-width="1.8" fill="none"/>
+              <circle cx="214" cy="88" r="2" fill="#f3cf7a"/>
+              <line x1="219" y1="83" x2="224" y2="78" stroke="#f3cf7a" stroke-width="1.8" stroke-linecap="round"/>
+
+              <!-- Node 3: Values & Character (Bottom Right) -->
+              <circle cx="178" cy="198" r="15" fill="#0b2a1e" stroke="#d4af37" stroke-width="2.5"/>
+              <path d="M178 194c-2-2.5-5-0.8-5 2 0 2.5 5 5.5 5 5.5s5-3 5-5.5c0-2.8-3-4.5-5-2z" fill="#f3cf7a"/>
+
+              <!-- Node 4: Technology & AI (Bottom Left) -->
+              <circle cx="62" cy="198" r="15" fill="#0b2a1e" stroke="#d4af37" stroke-width="2.5"/>
+              <rect x="56" y="192" width="12" height="12" rx="2" stroke="#f3cf7a" stroke-width="1.8" fill="none"/>
+              <line x1="62" y1="188" x2="62" y2="192" stroke="#f3cf7a" stroke-width="1.5"/>
+              <line x1="62" y1="204" x2="62" y2="208" stroke="#f3cf7a" stroke-width="1.5"/>
+              <line x1="52" y1="198" x2="56" y2="198" stroke="#f3cf7a" stroke-width="1.5"/>
+              <line x1="68" y1="198" x2="72" y2="198" stroke="#f3cf7a" stroke-width="1.5"/>
+
+              <!-- Node 5: Personal Growth (Top Left) -->
+              <circle cx="26" cy="88" r="15" fill="#0b2a1e" stroke="#d4af37" stroke-width="2.5"/>
+              <path d="M26 84c-2 2-2.5 3.5-2 5 1.8 0 3.2-1 4-2.5-0.8-1.5-2-2.5-2-2.5z" fill="#f3cf7a"/>
+              <path d="M26 89c0 2.5 2 3.5 3.5 3.5 0.8-1.8 0.8-3.2-1.2-4-0.8 0-1.5 0-2.3 0.5z" fill="#f3cf7a"/>
+
+              <!-- Central Academic Cap -->
+              <polygon points="120,68 152,82 120,96 88,82" fill="#d4af37"/>
+              <path d="M102,89 v8 c0,5 8,9 18,9 s18,-4 18,-9 v-8" fill="#a37b1d"/>
+              <circle cx="120" cy="108" r="4" fill="#fae3a6"/>
+
+              <!-- Iconic Center 'W' Lettermark -->
+              <path d="M84 116h13l13 44 13-36h7l13 36 13-44h13l-20 58h-12l-14-38-14 38H94L84 116z" fill="#fae3a6"/>
+
+              <!-- Open Book Base -->
+              <path d="M84 182c12-5 24-6 36-2v7c-12-4-24-3-36 2v-7zm72 0c-12-5-24-6-36-2v7c12-4 24-3 36 2v-7z" fill="#d4af37"/>
+            </svg>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-editorial text-2xl sm:text-3xl font-bold tracking-widest text-white block leading-none">
+                WINNERZ
+              </span>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="h-[1px] w-5 bg-champagne-400"></span>
+              <span class="font-editorial tracking-[0.38em] text-[10px] sm:text-xs font-semibold text-champagne-300 uppercase">
+                ACADEMY
+              </span>
+              <span class="h-[1px] w-5 bg-champagne-400"></span>
+            </div>
+            <span class="font-mono text-[8px] text-slate-400 tracking-wider uppercase block mt-0.5 hidden sm:block">
+              Empowering Minds &bull; Shaping Futures &bull; Building Winners
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation: Strictly Separated Categories -->
+        <nav class="hidden lg:flex items-center space-x-7 text-xs font-mono uppercase tracking-widest text-slate-300">
+          <a href="#pay-per-topic" class="text-champagne-300 hover:text-white transition-colors flex items-center gap-1.5 py-1 px-3 rounded-lg border border-champagne-400/30 bg-champagne-400/10">
+            <i data-lucide="tag" class="w-3.5 h-3.5 text-champagne-400"></i>
+            <span>Pay Per Topic</span>
+          </a>
+
+          <a href="#foundation-track" class="hover:text-champagne-300 transition-colors">
+            Class 1&ndash;8 (Foundation)
+          </a>
+
+          <a href="#commerce-track" class="hover:text-champagne-300 transition-colors">
+            Class 11&ndash;12 (Commerce)
+          </a>
+
+          <!-- Strictly Autonomous UGC NET Division Link -->
+          <a href="#ugc-net-track" class="relative group px-3.5 py-1.5 rounded-full bg-obsidian-850 border border-champagne-400/40 text-champagne-300 hover:bg-champagne-400 hover:text-obsidian-950 transition-all flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-champagne-400 group-hover:bg-obsidian-950"></span>
+            <span>UGC NET Division</span>
+          </a>
+
+          <a href="#atelier-pricing" class="hover:text-champagne-300 transition-colors flex items-center gap-1">
+            <i data-lucide="calculator" class="w-3.5 h-3.5 text-champagne-400"></i>
+            <span>Fee Estimator</span>
+          </a>
+        </nav>
+
+        <!-- Right Quick Contact & Booking Trigger -->
+        <div class="flex items-center gap-3">
+          <a href="tel:6291374919" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-champagne-400/30 bg-obsidian-850 text-champagne-300 hover:text-white font-mono text-xs transition-all hover:border-champagne-400">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-champagne-400"></i>
+            <span class="font-bold tracking-wider">6291374919</span>
+          </a>
+
+          <button onclick="openBookingModal()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-champagne-400 to-champagne-500 hover:from-champagne-300 hover:to-champagne-400 text-obsidian-950 font-bold font-sans text-xs tracking-wide uppercase shadow-gold-halo transition-all transform hover:-translate-y-0.5">
+            Book 1-on-1 Session
+          </button>
+
+          <button id="mobileMenuToggle" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Open mobile navigation">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden border-t border-champagne-400/20 bg-obsidian-950 px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-wider text-slate-300">
+      <a href="#pay-per-topic" class="block py-2 text-champagne-300 border-b border-white/5">
+        ✦ Pay Per Topic Banner &amp; Terms
+      </a>
+      <a href="#foundation-track" class="block py-2 hover:text-white border-b border-white/5">
+        📘 Class 1 &ndash; 8 All Subjects (Foundation)
+      </a>
+      <a href="#commerce-track" class="block py-2 hover:text-white border-b border-white/5">
+        📈 Class 11 &ndash; 12 Senior Commerce
+      </a>
+      <a href="#ugc-net-track" class="block py-2 text-champagne-400 font-bold border-b border-white/5">
+        🎓 UGC NET Independent Division
+      </a>
+      <a href="#atelier-pricing" class="block py-2 hover:text-white border-b border-white/5">
+        🧮 Interactive Fee Estimator
+      </a>
+      <div class="pt-4 grid grid-cols-2 gap-3">
+        <a href="tel:6291374919" class="text-center py-3 rounded-lg bg-obsidian-850 border border-champagne-400/40 text-champagne-300 font-bold">
+          Call Hotline
+        </a>
+        <a href="https://wa.me/916291374919?text=Hello%20Winnerz%20Academy%2C%20I%20wish%20to%20reserve%20a%20per-topic%20doubt%20clearing%20session." target="_blank" class="text-center py-3 rounded-lg bg-emerald-700 text-white font-bold">
+          WhatsApp Desk
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HIGH-CONTRAST GILDED PAY-PER-TOPIC LUXURY TICKER BANNER -->
+  <section id="pay-per-topic" class="bg-gradient-to-r from-obsidian-950 via-obsidian-900 to-obsidian-950 border-y border-champagne-400/30 overflow-hidden py-3.5 relative z-30 shadow-inner">
+    <div class="marquee-track flex items-center gap-8 text-xs sm:text-sm font-mono tracking-widest uppercase">
+      
+      <div class="flex items-center gap-8 whitespace-nowrap text-champagne-300">
+        <span class="flex items-center gap-2 text-white font-black bg-champagne-500/20 px-3 py-1 rounded-md border border-champagne-400/50">
+          <i data-lucide="tag" class="w-4 h-4 text-champagne-400"></i>
+          CHARGES APPLICABLE PER TOPIC BASIS
+        </span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-champagne-200 font-semibold">Pay only for what you need!</span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-white">Exam Season Special &bull; Stay Ahead, Stay Confident</span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-champagne-400 font-bold">Personalized 1-on-1 Doubt Clearing Sessions</span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-slate-300">Hotline: 6291374919</span>
+        <span class="text-champagne-400/50">&bull;</span>
+      </div>
+
+      <div class="flex items-center gap-8 whitespace-nowrap text-champagne-300">
+        <span class="flex items-center gap-2 text-white font-black bg-champagne-500/20 px-3 py-1 rounded-md border border-champagne-400/50">
+          <i data-lucide="tag" class="w-4 h-4 text-champagne-400"></i>
+          CHARGES APPLICABLE PER TOPIC BASIS
+        </span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-champagne-200 font-semibold">Pay only for what you need!</span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-white">Exam Season Special &bull; Stay Ahead, Stay Confident</span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-champagne-400 font-bold">Personalized 1-on-1 Doubt Clearing Sessions</span>
+        <span class="text-champagne-400/50">&bull;</span>
+        <span class="text-slate-300">Hotline: 6291374919</span>
+        <span class="text-champagne-400/50">&bull;</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDITORIAL HERO SECTION -->
+  <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 bg-parchment-100 overflow-hidden architect-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Editorial Headline & Manifesto -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-obsidian-950 text-champagne-300 font-mono text-[11px] tracking-widest uppercase border border-champagne-400/40 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-champagne-400 animate-pulse"></span>
+            <span>Personalized Academic Precision &bull; No Blanket Fees</span>
+          </div>
+
+          <div class="space-y-4">
+            <h1 class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-bold text-obsidian-950 leading-[1.05] tracking-tight">
+              Personalized <br />
+              <span class="italic font-normal text-obsidian-800">Doubt Clearing</span> <br />
+              <span class="gold-gradient-text font-bold">Sessions.</span>
+            </h1>
+            <p class="font-sans text-base sm:text-lg text-slate-700 max-w-xl font-normal leading-relaxed">
+              We eliminate rigid batch timetables. Resolve stubborn roadblocks in school foundation or senior commerce on a strict <strong class="text-obsidian-950 font-semibold">Pay-Per-Topic</strong> basis. Pay exclusively for the specific chapter, numerical theorem, or case study where you need expert mentorship.
+            </p>
+          </div>
+
+          <!-- The Two Core Poster Tracks Quick Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 max-w-xl">
+            
+            <a href="#foundation-track" class="group p-5 rounded-2xl bg-white border border-stone-200/90 hover:border-champagne-400 shadow-subtle-card transition-all duration-300">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-slate-400 font-bold">Category 01</span>
+                <span class="w-8 h-8 rounded-lg bg-obsidian-950 text-champagne-400 flex items-center justify-center text-xs group-hover:bg-champagne-400 group-hover:text-obsidian-950 transition-colors">
+                  <i data-lucide="book-open" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-editorial text-xl font-bold text-obsidian-950 group-hover:text-champagne-600 transition-colors">Class 1 &ndash; 8</h3>
+              <p class="text-xs text-slate-600 mt-1">All Subjects Foundation: English, Mathematics, Science, Social Science, Languages &amp; Logic.</p>
+            </a>
+
+            <a href="#commerce-track" class="group p-5 rounded-2xl bg-white border border-stone-200/90 hover:border-champagne-400 shadow-subtle-card transition-all duration-300">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-slate-400 font-bold">Category 02</span>
+                <span class="w-8 h-8 rounded-lg bg-obsidian-950 text-champagne-400 flex items-center justify-center text-xs group-hover:bg-champagne-400 group-hover:text-obsidian-950 transition-colors">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i>
+                </span>
+              </div>
+              <h3 class="font-editorial text-xl font-bold text-obsidian-950 group-hover:text-champagne-600 transition-colors">Class 11 &ndash; 12</h3>
+              <p class="text-xs text-slate-600 mt-1">Commerce Subjects: Accountancy, Business Studies, Economics &amp; Applied Mathematics.</p>
+            </a>
+
+          </div>
+
+          <!-- Hero Action Links -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+            <a href="tel:6291374919" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-obsidian-950 hover:bg-obsidian-900 text-white font-mono text-xs uppercase tracking-widest border border-champagne-400/40 shadow-atelier-luxury transition-all">
+              <i data-lucide="phone-outgoing" class="w-4 h-4 text-champagne-400"></i>
+              <span>Call Hotline: 6291374919</span>
+            </a>
+
+            <a href="#atelier-pricing" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-champagne-400 to-champagne-500 hover:from-champagne-300 hover:to-champagne-400 text-obsidian-950 font-sans font-bold text-xs uppercase tracking-wider shadow-gold-halo transition-all">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>Calculate Per-Topic Fee</span>
+            </a>
+          </div>
+
+          <!-- Autonomous UGC NET Notice Link -->
+          <div class="pt-1 flex items-center gap-2 text-xs font-mono text-slate-500">
+            <span>Specialized Post-Graduate Research Track:</span>
+            <a href="#ugc-net-track" class="text-obsidian-950 font-bold underline decoration-champagne-400 underline-offset-4 hover:text-champagne-600 transition-colors">
+              Explore Independent UGC NET Wing &rarr;
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Reimagined Poster Plaque -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md bg-gradient-to-b from-obsidian-950 to-obsidian-900 rounded-3xl p-7 sm:p-9 text-white border-2 border-champagne-400/40 shadow-atelier-luxury">
+            
+            <!-- Gilded Status Badge -->
+            <div class="absolute -top-4 -right-3 bg-gradient-to-r from-champagne-300 to-champagne-400 text-obsidian-950 font-mono text-[10px] font-black uppercase px-3.5 py-1.5 rounded-full tracking-wider shadow-gold-halo flex items-center gap-1.5 border border-white">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i>
+              <span>Expert Help &bull; Better Results</span>
+            </div>
+
+            <!-- Authentic Seal & Identity -->
+            <div class="text-center pb-6 border-b border-white/10">
+              <div class="w-24 h-24 mx-auto mb-3">
+                <svg viewBox="0 0 240 240" class="w-full h-full" fill="none">
+                  <polygon points="120,22 214,88 178,198 62,198 26,88" stroke="#d4af37" stroke-width="3" fill="#04150e" />
+                  <circle cx="120" cy="22" r="14" fill="#0b2a1e" stroke="#d4af37" stroke-width="2"/>
+                  <circle cx="214" cy="88" r="14" fill="#0b2a1e" stroke="#d4af37" stroke-width="2"/>
+                  <circle cx="178" cy="198" r="14" fill="#0b2a1e" stroke="#d4af37" stroke-width="2"/>
+                  <circle cx="62" cy="198" r="14" fill="#0b2a1e" stroke="#d4af37" stroke-width="2"/>
+                  <circle cx="26" cy="88" r="14" fill="#0b2a1e" stroke="#d4af37" stroke-width="2"/>
+                  <polygon points="120,68 152,82 120,96 88,82" fill="#d4af37"/>
+                  <path d="M84 116h13l13 44 13-36h7l13 36 13-44h13l-20 58h-12l-14-38-14 38H94L84 116z" fill="#f3cf7a"/>
+                  <path d="M84 182c12-5 24-6 36-2v7c-12-4-24-3-36 2v-7zm72 0c-12-5-24-6-36-2v7c12-4 24-3 36 2v-7z" fill="#d4af37"/>
+                </svg>
+              </div>
+
+              <h2 class="font-editorial text-3xl font-bold tracking-widest text-white">WINNERZ ACADEMY</h2>
+              <p class="font-mono text-[9px] uppercase tracking-[0.25em] text-champagne-300 mt-1">
+                Empowering Minds &bull; Shaping Futures &bull; Building Winners
+              </p>
+            </div>
+
+            <!-- Disciplines Grid from Poster -->
+            <div class="py-5">
+              <span class="font-mono text-[10px] text-champagne-400 uppercase tracking-widest block text-center mb-3">
+                Subjects We Cover
+              </span>
+              <div class="grid grid-cols-3 gap-2 text-center font-sans text-xs">
+                <div class="py-2 px-1 rounded-xl bg-white/5 border border-white/10">English</div>
+                <div class="py-2 px-1 rounded-xl bg-white/5 border border-white/10">Mathematics</div>
+                <div class="py-2 px-1 rounded-xl bg-white/5 border border-white/10">Science</div>
+                <div class="py-2 px-1 rounded-xl bg-white/5 border border-white/10">Social Science</div>
+                <div class="py-2 px-1 rounded-xl bg-white/5 border border-white/10">Economics</div>
+                <div class="py-2 px-1 rounded-xl bg-white/5 border border-white/10">Commerce</div>
+              </div>
+              <div class="mt-2 text-center">
+                <span class="inline-block w-full py-2 rounded-xl bg-champagne-400/10 border border-champagne-400/30 text-champagne-300 text-xs font-medium">
+                  Business Studies Case Studies
+                </span>
+              </div>
+            </div>
+
+            <!-- Value Proposition & Hotline Plaque -->
+            <div class="pt-3 border-t border-white/10 text-center">
+              <div class="mb-2 inline-flex items-center gap-1.5 text-xs text-champagne-300 font-mono">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-champagne-400"></i>
+                <span>Charges Applicable Per Topic Basis</span>
+              </div>
+              <span class="font-mono text-[10px] text-slate-400 uppercase tracking-wider block">
+                Call Now to Book Your Session
+              </span>
+              <a href="tel:6291374919" class="font-editorial text-3xl font-bold text-champagne-300 hover:text-white tracking-widest block mt-0.5 transition-colors">
+                6291374919
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5 PILLARS / VERTICES OF THE SEAL -->
+  <section class="py-20 bg-white border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-champagne-600 block mb-1">
+            Institutional Seal Vertices
+          </span>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-obsidian-950">
+            The Five Pillars of Mentorship
+          </h2>
+        </div>
+        <p class="font-sans text-xs sm:text-sm text-slate-600 max-w-md">
+          Represented on our institutional emblem, every 1-on-1 session weaves fundamental academic precision with character, tech fluency, and lifelong confidence.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+        
+        <!-- Vertex 1 -->
+        <div class="p-6 rounded-2xl bg-parchment-100 border border-stone-200/80 hover:border-champagne-400 transition-all hover:shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center mb-4">
+            <i data-lucide="book-check" class="w-5 h-5"></i>
+          </div>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">Pillar 01</span>
+          <h3 class="font-editorial text-xl font-bold text-obsidian-950 mb-2">Academics</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Rigorous conceptual clarity, derivations, textbook question resolution, and exam paper presentation drills.
+          </p>
+        </div>
+
+        <!-- Vertex 2 -->
+        <div class="p-6 rounded-2xl bg-parchment-100 border border-stone-200/80 hover:border-champagne-400 transition-all hover:shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center mb-4">
+            <i data-lucide="compass" class="w-5 h-5"></i>
+          </div>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">Pillar 02</span>
+          <h3 class="font-editorial text-xl font-bold text-obsidian-950 mb-2">Career Guidance</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Targeted roadmapping for higher school streams, commerce professional certifications (CA, CS, CMA), and university paths.
+          </p>
+        </div>
+
+        <!-- Vertex 3 -->
+        <div class="p-6 rounded-2xl bg-parchment-100 border border-stone-200/80 hover:border-champagne-400 transition-all hover:shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center mb-4">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">Pillar 03</span>
+          <h3 class="font-editorial text-xl font-bold text-obsidian-950 mb-2">Values &amp; Character</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Cultivating study discipline, exam integrity, steady time management under pressure, and intellectual tenacity.
+          </p>
+        </div>
+
+        <!-- Vertex 4 -->
+        <div class="p-6 rounded-2xl bg-parchment-100 border border-stone-200/80 hover:border-champagne-400 transition-all hover:shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center mb-4">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">Pillar 04</span>
+          <h3 class="font-editorial text-xl font-bold text-obsidian-950 mb-2">Technology &amp; AI</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Modern visual problem breakdowns, diagnostic question maps, and smart practice sets that isolate weak sub-topics.
+          </p>
+        </div>
+
+        <!-- Vertex 5 -->
+        <div class="p-6 rounded-2xl bg-parchment-100 border border-stone-200/80 hover:border-champagne-400 transition-all hover:shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center mb-4">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-bold block mb-1">Pillar 05</span>
+          <h3 class="font-editorial text-xl font-bold text-obsidian-950 mb-2">Personal Growth</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Neutralizing exam phobia, building self-efficacy, and equipping learners with self-directed problem-solving habits.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORY 1: JUNIOR FOUNDATION (CLASS 1 - 8: ALL SUBJECTS) -->
+  <section id="foundation-track" class="py-20 bg-parchment-50 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-obsidian-950 text-champagne-300 font-mono text-[11px] uppercase tracking-wider mb-2">
+            Category 01 &bull; Junior Foundation
+          </div>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-obsidian-950">
+            For Students of Class 1 &ndash; 8
+          </h2>
+          <span class="font-sans text-xs font-bold text-champagne-600 uppercase tracking-widest block mt-1">
+            ALL SUBJECTS &bull; CBSE &bull; ICSE &bull; STATE BOARDS
+          </span>
+        </div>
+
+        <button onclick="openBookingModal('Class 1-8 Junior Foundation')" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-obsidian-950 hover:bg-obsidian-900 text-white font-mono text-xs uppercase tracking-wider transition-all border border-champagne-400/40 shadow-sm">
+          <i data-lucide="calendar-plus" class="w-3.5 h-3.5 text-champagne-400"></i>
+          <span>Schedule Class 1&ndash;8 Session</span>
+        </button>
+      </div>
+
+      <!-- Subject Modules Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-7 rounded-2xl border border-stone-200 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-parchment-100 text-obsidian-950 flex items-center justify-center mb-4 border border-stone-300">
+            <i data-lucide="binary" class="w-5 h-5 text-champagne-600"></i>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-1">Mathematics &amp; Mental Math</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Unitary method, fraction arithmetic, exponents, introductory algebra, geometric construction, and mensuration word problems.
+          </p>
+          <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>Pay Per Formula / Chapter</span>
+            <span class="text-champagne-600 font-bold">1-on-1 Focus</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl border border-stone-200 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-parchment-100 text-obsidian-950 flex items-center justify-center mb-4 border border-stone-300">
+            <i data-lucide="atom" class="w-5 h-5 text-champagne-600"></i>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-1">General Science</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Cell structures, force and friction, heat transfer, light propagation, acid-base neutralizations, and environmental systems.
+          </p>
+          <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>Pay Per Topic / Experiment</span>
+            <span class="text-champagne-600 font-bold">Visual Proofs</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl border border-stone-200 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-parchment-100 text-obsidian-950 flex items-center justify-center mb-4 border border-stone-300">
+            <i data-lucide="feather" class="w-5 h-5 text-champagne-600"></i>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-1">English Language &amp; Grammar</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Tenses, active/passive voice, direct/indirect narration, reading comprehension tactics, and structured descriptive writing.
+          </p>
+          <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>Pay Per Grammar Rule</span>
+            <span class="text-champagne-600 font-bold">Editorial Review</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl border border-stone-200 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-parchment-100 text-obsidian-950 flex items-center justify-center mb-4 border border-stone-300">
+            <i data-lucide="globe" class="w-5 h-5 text-champagne-600"></i>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-1">Social Science &amp; History</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Historical timelines, national movements, earth layers and climate zones, map plotting, and democratic civics institutions.
+          </p>
+          <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>Pay Per History Unit</span>
+            <span class="text-champagne-600 font-bold">Map Work</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl border border-stone-200 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-parchment-100 text-obsidian-950 flex items-center justify-center mb-4 border border-stone-300">
+            <i data-lucide="languages" class="w-5 h-5 text-champagne-600"></i>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-1">Regional Languages (Hindi / Bengali)</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Vyakaran rules, spelling phonetics, textual prose analysis, and structured answer phrasing for school tests.
+          </p>
+          <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>Pay Per Grammar Topic</span>
+            <span class="text-champagne-600 font-bold">Vernacular Fluency</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-7 rounded-2xl border border-stone-200 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="w-10 h-10 rounded-xl bg-parchment-100 text-obsidian-950 flex items-center justify-center mb-4 border border-stone-300">
+            <i data-lucide="puzzle" class="w-5 h-5 text-champagne-600"></i>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-1">Foundation Logic &amp; Reasoning</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Analogies, coding-decoding, number patterns, spatial reasoning, and introductory Olympiad problem breakdown.
+          </p>
+          <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span>Pay Per Problem Set</span>
+            <span class="text-champagne-600 font-bold">Aptitude Build</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORY 2: SENIOR SECONDARY COMMERCE (CLASS 11 & 12) -->
+  <section id="commerce-track" class="py-20 bg-parchment-100 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-champagne-500/20 text-champagne-800 border border-champagne-400/50 font-mono text-[11px] uppercase tracking-wider mb-2">
+            Category 02 &bull; Senior Secondary
+          </div>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-obsidian-950">
+            For Students of Class 11 &ndash; 12
+          </h2>
+          <span class="font-sans text-xs font-bold text-champagne-600 uppercase tracking-widest block mt-1">
+            COMMERCE SUBJECTS &bull; CBSE &bull; ISC &bull; STATE BOARDS
+          </span>
+        </div>
+
+        <button onclick="openBookingModal('Class 11-12 Commerce Suite')" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-obsidian-950 hover:bg-obsidian-900 text-white font-mono text-xs uppercase tracking-wider transition-all border border-champagne-400/40 shadow-sm">
+          <i data-lucide="calendar-plus" class="w-3.5 h-3.5 text-champagne-400"></i>
+          <span>Schedule Commerce Session</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        
+        <!-- Accountancy -->
+        <div class="p-7 rounded-3xl bg-white border-2 border-stone-200/90 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono text-[11px] text-slate-400 font-bold uppercase">Commerce 01</span>
+            <div class="w-9 h-9 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center">
+              <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-2">Accountancy</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Partnership adjustments, Share Capital pro-rata forfeiture/re-issue, Cash Flow Statements (AS-3), and Ratio Analysis.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-700 font-medium border-t border-stone-100 pt-3">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> Balance Sheet Mismatches</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> Journal Entry Clarity</li>
+          </ul>
+        </div>
+
+        <!-- Economics -->
+        <div class="p-7 rounded-3xl bg-white border-2 border-stone-200/90 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono text-[11px] text-slate-400 font-bold uppercase">Commerce 02</span>
+            <div class="w-9 h-9 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center">
+              <i data-lucide="pie-chart" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-2">Economics</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Micro/Macro graph mechanisms: Indifference curves, National Income aggregation (3 methods), and AD-AS equilibrium.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-700 font-medium border-t border-stone-100 pt-3">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> National Income Numericals</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> BoP &amp; Forex Rate Models</li>
+          </ul>
+        </div>
+
+        <!-- Business Studies -->
+        <div class="p-7 rounded-3xl bg-white border-2 border-stone-200/90 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono text-[11px] text-slate-400 font-bold uppercase">Commerce 03</span>
+            <div class="w-9 h-9 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center">
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-2">Business Studies</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Principles of Management (Taylor &amp; Fayol), Financial Management, Marketing Mix (4Ps), and Consumer Protection case questions.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-700 font-medium border-t border-stone-100 pt-3">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> Board Case Study Keywords</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> Structured Answer Formats</li>
+          </ul>
+        </div>
+
+        <!-- Applied Mathematics -->
+        <div class="p-7 rounded-3xl bg-white border-2 border-stone-200/90 hover:border-champagne-400 transition-all shadow-subtle-card">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono text-[11px] text-slate-400 font-bold uppercase">Commerce 04</span>
+            <div class="w-9 h-9 rounded-xl bg-obsidian-950 text-champagne-400 flex items-center justify-center">
+              <i data-lucide="line-chart" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <h3 class="font-editorial text-2xl font-bold text-obsidian-950 mb-2">Applied Mathematics</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Financial mathematics, probability distributions, matrices &amp; determinants, and calculus applied to business optimization.
+          </p>
+          <ul class="space-y-2 text-xs text-slate-700 font-medium border-t border-stone-100 pt-3">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> Marginal Cost/Revenue Calculus</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-champagne-500"></i> Time Value of Money &amp; EMI</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORY 3: UGC NET SECTION (STRICTLY INDEPENDENT & SEPARATE) -->
+  <section id="ugc-net-track" class="py-24 bg-obsidian-950 text-white relative overflow-hidden">
+    <!-- Subtle Architectural Background -->
+    <div class="absolute inset-0 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Autonomous Distinction Banner -->
+      <div class="p-6 rounded-2xl bg-obsidian-900/90 border border-champagne-400/40 mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-atelier-luxury">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-champagne-400 to-champagne-600 text-obsidian-950 flex items-center justify-center font-editorial font-bold text-lg flex-shrink-0 shadow-md">
+            UGC
+          </div>
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-champagne-300 font-bold block">
+              Autonomous Higher Competitive Division &bull; Category 03
+            </span>
+            <p class="text-xs sm:text-sm text-slate-300 font-light mt-0.5">
+              Strictly separate from school grade batches. Designed for Post-Graduate scholars, Junior Research Fellow (JRF) aspirants, and Assistant Professor qualification.
+            </p>
+          </div>
+        </div>
+        <a href="tel:6291374919" class="font-mono text-xs text-champagne-300 hover:text-white px-4 py-2 rounded-lg bg-white/5 border border-champagne-400/30 whitespace-nowrap">
+          Direct UGC Inquiry: 6291374919
+        </a>
+      </div>
+
+      <div class="mb-12 text-left">
+        <span class="font-mono text-xs uppercase tracking-widest text-champagne-400 block mb-2">
+          Post-Graduate Mentorship Wing
+        </span>
+        <h2 class="font-editorial text-4xl sm:text-6xl font-bold text-white">
+          UGC NET / JRF Examination Wing
+        </h2>
+        <p class="text-slate-300 text-sm max-w-3xl mt-2 leading-relaxed">
+          Master high-yield questions, resolve tricky previous year papers (PYQs), and master quantitative research methodology without locking into entire semester packages.
+        </p>
+      </div>
+
+      <!-- Paper 1 & Paper 2 Split -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Paper 1 -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-obsidian-900/90 border border-champagne-400/30 hover:border-champagne-400 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full bg-champagne-400/15 text-champagne-300 border border-champagne-400/30 font-mono text-xs uppercase">
+              Mandatory General Aptitude
+            </span>
+            <span class="font-mono text-xs text-slate-400 font-bold">Paper 01</span>
+          </div>
+
+          <h3 class="font-editorial text-3xl font-bold text-white mb-3">Teaching &amp; Research Aptitude</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-6 font-light">
+            Research ethics and methodology, positivist vs post-positivist approaches, Data Interpretation (DI) shortcuts, Indian Logic (Pramanas, Hetvabhasa fallacies), and Higher Education governance under NEP 2020.
+          </p>
+
+          <ul class="space-y-3 text-xs text-slate-200 border-t border-white/10 pt-6 mb-8">
+            <li class="flex items-center gap-2.5"><i data-lucide="arrow-right" class="w-4 h-4 text-champagne-400"></i> Indian Logic Pramanas &amp; Syllogisms Decoded</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="arrow-right" class="w-4 h-4 text-champagne-400"></i> Calculator-free Data Interpretation Strategies</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="arrow-right" class="w-4 h-4 text-champagne-400"></i> PYQ Analysis (2019&ndash;2025 Papers)</li>
+          </ul>
+
+          <button onclick="openBookingModal('UGC NET Paper 1')" class="w-full py-4 rounded-xl bg-champagne-400 hover:bg-champagne-300 text-obsidian-950 font-mono text-xs font-bold uppercase tracking-wider transition-colors shadow-gold-halo flex items-center justify-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Schedule UGC NET Paper 1 Session</span>
+          </button>
+        </div>
+
+        <!-- Paper 2 -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-obsidian-900/90 border border-champagne-400/30 hover:border-champagne-400 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 rounded-full bg-champagne-400/15 text-champagne-300 border border-champagne-400/30 font-mono text-xs uppercase">
+              Specialized Discipline
+            </span>
+            <span class="font-mono text-xs text-slate-400 font-bold">Paper 02</span>
+          </div>
+
+          <h3 class="font-editorial text-3xl font-bold text-white mb-3">Commerce, Economics &amp; Management</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-6 font-light">
+            Corporate Finance (Capital Structure theories, Miller-Modigliani), Econometric basics (OLS assumptions, multicollinearity), International Business frameworks (WTO, balance of payments), and Strategic Management.
+          </p>
+
+          <ul class="space-y-3 text-xs text-slate-200 border-t border-white/10 pt-6 mb-8">
+            <li class="flex items-center gap-2.5"><i data-lucide="arrow-right" class="w-4 h-4 text-champagne-400"></i> Assertion-Reason Question Troubleshooting</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="arrow-right" class="w-4 h-4 text-champagne-400"></i> Numerical Cost of Capital &amp; Capital Budgeting</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="arrow-right" class="w-4 h-4 text-champagne-400"></i> Subject JRF Cutoff Strategy</li>
+          </ul>
+
+          <button onclick="openBookingModal('UGC NET Paper 2')" class="w-full py-4 rounded-xl bg-champagne-400 hover:bg-champagne-300 text-obsidian-950 font-mono text-xs font-bold uppercase tracking-wider transition-colors shadow-gold-halo flex items-center justify-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Schedule UGC NET Paper 2 Session</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE PAY-PER-TOPIC FEE CALCULATOR -->
+  <section id="atelier-pricing" class="py-24 bg-white border-b border-stone-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="font-mono text-xs uppercase tracking-widest text-champagne-600 block mb-1">
+          Bespoke Fee Estimator
+        </span>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-obsidian-950">
+          The Pay-Per-Topic Calculator
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2">
+          Calculate your exact per-topic investment. No hidden semester locks or blanket package fees.
+        </p>
+      </div>
+
+      <!-- Interactive Calculator Card -->
+      <div class="bg-parchment-100 rounded-3xl p-7 sm:p-10 border-2 border-stone-200/90 shadow-subtle-card">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          <!-- Select Category -->
+          <div>
+            <label class="block font-mono text-[11px] uppercase tracking-wider text-slate-600 font-bold mb-2">
+              1. Category *
+            </label>
+            <select id="atelierTrack" onchange="syncAtelierSubjects()" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-obsidian-950">
+              <option value="cat1_foundation" selected>Category 1: Class 1&ndash;8 Foundation</option>
+              <option value="cat2_commerce">Category 2: Class 11&ndash;12 Commerce</option>
+              <option value="cat3_ugcnet">Category 3: UGC NET Independent Wing</option>
+            </select>
+          </div>
+
+          <!-- Select Subject -->
+          <div>
+            <label class="block font-mono text-[11px] uppercase tracking-wider text-slate-600 font-bold mb-2">
+              2. Specific Subject *
+            </label>
+            <select id="atelierSubject" onchange="calculateAtelierFee()" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-obsidian-950">
+              <!-- Populated dynamically via JS -->
+            </select>
+          </div>
+
+          <!-- Session Depth -->
+          <div>
+            <label class="block font-mono text-[11px] uppercase tracking-wider text-slate-600 font-bold mb-2">
+              3. Doubt Depth &bull; Scope *
+            </label>
+            <select id="atelierScope" onchange="calculateAtelierFee()" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-obsidian-950">
+              <option value="micro">Single Problem / Theorem Clarification (45 min)</option>
+              <option value="chapter" selected>Full Numerical Chapter Deconstruction (90 min)</option>
+              <option value="exam">Pre-Exam Mock Diagnosis &amp; Doubts (120 min)</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Calculated Fee Display Area -->
+        <div class="mt-8 pt-8 border-t border-stone-200/90 flex flex-col sm:flex-row items-center justify-between gap-6 bg-white p-6 sm:p-7 rounded-2xl border border-stone-200">
+          <div>
+            <span class="font-mono text-[10px] text-slate-400 uppercase tracking-widest block font-bold">
+              Estimated Fee &bull; Pay-Per-Topic
+            </span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span id="calculatedFeeDisplay" class="font-editorial text-4xl sm:text-5xl font-bold text-obsidian-950">₹320</span>
+              <span class="text-xs text-slate-500 font-mono">/ 1-on-1 dedicated mentor slot</span>
+            </div>
+            <p id="calculatedFeeDetail" class="text-xs font-medium text-champagne-600 mt-1">
+              Full chapter theory &amp; exercise questions covered comprehensively.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <button onclick="bookCalculatedSlot()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-obsidian-950 hover:bg-obsidian-900 text-white font-mono text-xs uppercase tracking-wider transition-all">
+              Reserve This Slot
+            </button>
+            <a id="atelierWaButton" href="https://wa.me/916291374919" target="_blank" class="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Book on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LUXURY EDITORIAL FOOTER (Address Appears ONLY ONCE Here) -->
+  <footer class="bg-obsidian-950 text-slate-400 border-t border-champagne-400/20 py-16 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand Summary -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="font-editorial text-2xl font-bold tracking-widest text-white">WINNERZ ACADEMY</span>
+          </div>
+          <p class="font-mono text-xs uppercase tracking-widest text-champagne-400 font-bold">
+            EMPOWERING MINDS &bull; SHAPING FUTURES &bull; BUILDING WINNERS
+          </p>
+          <p class="text-xs text-slate-400 max-w-md leading-relaxed font-light">
+            Premier academic mentorship providing precision doubt clearing on a strictly per-topic basis for school foundation and commerce aspirants.
+          </p>
+          <div class="pt-2 font-mono text-xs text-slate-300">
+            Hotline / WhatsApp: <a href="tel:6291374919" class="text-champagne-300 font-bold hover:underline">6291374919</a>
+          </div>
+        </div>
+
+        <!-- Academic Streams -->
+        <div class="space-y-3 font-mono text-xs">
+          <h4 class="text-white uppercase tracking-widest font-bold">Distinct Streams</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#foundation-track" class="hover:text-white">Class 1 &ndash; 8 (All Subjects)</a></li>
+            <li><a href="#commerce-track" class="hover:text-white">Class 11 &ndash; 12 (Commerce Suite)</a></li>
+            <li><a href="#ugc-net-track" class="text-champagne-300 font-bold hover:text-white">UGC NET Division</a></li>
+            <li><a href="#pay-per-topic" class="hover:text-white">Pay-Per-Topic Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Single Official Address Mention -->
+        <div class="space-y-3 font-mono text-xs">
+          <h4 class="text-white uppercase tracking-widest font-bold">Center Location</h4>
+          <p class="text-champagne-200 leading-relaxed font-medium">
+            Vista 4, Uniworld City, New Town, beside Karigori Bhawan
+          </p>
+          <p class="text-slate-400 text-[11px] leading-normal pt-1">
+            Exam season mentorship hours:<br />
+            Monday &ndash; Sunday &bull; 10:00 AM &ndash; 9:00 PM
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between font-mono text-[11px] text-slate-500 gap-4">
+        <div>&copy; 2026 Winnerz Academy. All rights reserved.</div>
+        <div class="text-champagne-400/80 font-editorial tracking-wider text-sm">
+          EMPOWERING MINDS &bull; SHAPING FUTURES &bull; BUILDING WINNERS
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-obsidian-950/80 backdrop-blur-md" role="dialog" aria-modal="true">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-7 sm:p-9 shadow-atelier-luxury border border-stone-200 relative max-h-[90vh] overflow-y-auto">
+      
+      <button onclick="closeBookingModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 p-1.5 rounded-full hover:bg-slate-100 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="font-mono text-[10px] font-bold uppercase tracking-widest text-champagne-600 block">
+          Charges Applicable Per Topic Basis
+        </span>
+        <h3 class="font-editorial text-3xl font-bold text-obsidian-950 mt-1">Book 1-on-1 Session</h3>
+        <p class="text-xs text-slate-600 mt-1">Pay only for what you need. Enter your specific subject or chapter roadblock.</p>
+      </div>
+
+      <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block font-mono text-[11px] uppercase tracking-wider text-slate-600 font-bold mb-1.5">Student / Guardian Name *</label>
+          <input type="text" id="formName" required placeholder="e.g. Anirban Roy" class="w-full bg-parchment-100 border border-stone-300 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-obsidian-950">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-mono text-[11px] uppercase tracking-wider text-slate-600 font-bold mb-1.5">Phone Number *</label>
+            <input type="tel" id="formPhone" required placeholder="10-digit mobile" class="w-full bg-parchment-100 border border-stone-300 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-obsidian-950">
+          </div>
+          <div>
+            <label class="block font-mono text-[11px] uppercase tracking-wider text-slate-600 font-bold mb-1.5">Category *</label>
+            <select id="formCategory" class="w-full bg-parchment-100 border border-stone-300 rounded-xl px-3 py-3 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-obsidian-950">
+              <option value="Class 1-8 Junior Foundation">Class 1&ndash;8 Junior Foundation</option>
+              <option value="Class 11-12 Commerce Suite">Class 11&ndash;12 Commerce Suite</option>
+              <option value="UGC NET Higher Division">UGC NET Higher Division</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-mono text-[11px] uppercase tracking-wider text-slate-600 font-bold mb-1.5">Specific Topic / Chapter *</label>
+          <input type="text" id="formTopic" required placeholder="e.g. Accountancy: Cash Flow Statement or Math: Fractions" class="w-full bg-parchment-100 border border-stone-300 rounded-xl px-4 py-3 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-obsidian-950">
+        </div>
+
+        <button type="submit" class="w-full py-4 rounded-xl bg-obsidian-950 hover:bg-obsidian-900 text-white font-mono text-xs uppercase tracking-widest border border-champagne-400/40 shadow-md transition-all mt-2">
+          Submit Doubt Clearing Request
+        </button>
+
+        <div class="text-center pt-2">
+          <span class="text-xs text-slate-500 font-mono">
+            Or call hotline directly: <a href="tel:6291374919" class="font-bold text-obsidian-950 hover:underline">6291374919</a>
+          </span>
+        </div>
+      </form>
+
+      <div id="bookingSuccess" class="hidden text-center py-8 space-y-3">
+        <div class="w-12 h-12 rounded-full bg-champagne-400/20 text-champagne-600 flex items-center justify-center mx-auto">
+          <i data-lucide="check-check" class="w-6 h-6"></i>
+        </div>
+        <h4 class="font-editorial text-2xl font-bold text-obsidian-950">Request Dispatched</h4>
+        <p class="text-xs text-slate-600 max-w-xs mx-auto">
+          Our mentor desk will contact you via <strong>6291374919</strong> to schedule your exact doubt resolution slot.
+        </p>
+        <button onclick="closeBookingModal()" class="px-6 py-2.5 rounded-xl bg-obsidian-950 text-white font-mono text-xs uppercase tracking-wider">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      syncAtelierSubjects();
+    });
+
+    // Mobile Drawer Toggle
+    const mobileBtn = document.getElementById('mobileMenuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (mobileBtn && mobileDrawer) {
+      mobileBtn.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('hidden');
+      });
+    }
+
+    // Catalog for Pay-per-topic Calculator
+    const atelierPricingCatalog = {
+      cat1_foundation: [
+        { name: "Mathematics & Mental Math", base: 300 },
+        { name: "General Science (Physics/Chem/Bio)", base: 300 },
+        { name: "English Grammar & Writing", base: 280 },
+        { name: "Social Science & Maps", base: 280 },
+        { name: "Hindi / Bengali Language", base: 250 },
+        { name: "Foundation Logic & Olympiad", base: 300 }
+      ],
+      cat2_commerce: [
+        { name: "Accountancy (Ledgers, Cash Flow, Shares)", base: 450 },
+        { name: "Economics (Micro/Macro Graphs)", base: 420 },
+        { name: "Business Studies (Case Studies)", base: 400 },
+        { name: "Applied Mathematics", base: 450 }
+      ],
+      cat3_ugcnet: [
+        { name: "UGC NET Paper 1 (Teaching & Research Aptitude)", base: 650 },
+        { name: "UGC NET Paper 2 (Commerce)", base: 750 },
+        { name: "UGC NET Paper 2 (Economics)", base: 750 },
+        { name: "UGC NET Paper 2 (Management)", base: 750 }
+      ]
+    };
+
+    function syncAtelierSubjects() {
+      const trackKey = document.getElementById('atelierTrack').value;
+      const subjSelect = document.getElementById('atelierSubject');
+      subjSelect.innerHTML = '';
+
+      const list = atelierPricingCatalog[trackKey] || [];
+      list.forEach((item, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = item.name;
+        opt.setAttribute('data-base', item.base);
+        subjSelect.appendChild(opt);
+      });
+
+      calculateAtelierFee();
+    }
+
+    function calculateAtelierFee() {
+      const subjSelect = document.getElementById('atelierSubject');
+      const selected = subjSelect.options[subjSelect.selectedIndex];
+      if (!selected) return;
+
+      const basePrice = parseInt(selected.getAttribute('data-base') || '300', 10);
+      const scope = document.getElementById('atelierScope').value;
+
+      let multiplier = 1.0;
+      let detail = "Single micro-concept, theorem doubt, or exercise bottleneck (45 min).";
+
+      if (scope === 'chapter') {
+        multiplier = 1.6;
+        detail = "Full chapter numerical derivations & theory mastery (90 min).";
+      } else if (scope === 'exam') {
+        multiplier = 2.2;
+        detail = "Pre-exam mock test review & high-priority question clinic (120 min).";
+      }
+
+      const total = Math.round(basePrice * multiplier);
+      document.getElementById('calculatedFeeDisplay').textContent = "₹" + total;
+      document.getElementById('calculatedFeeDetail').textContent = detail;
+
+      // Update WhatsApp URL
+      const trackName = document.getElementById('atelierTrack').options[document.getElementById('atelierTrack').selectedIndex].text;
+      const subjectName = selected.text;
+      const waText = encodeURIComponent(`Hello Winnerz Academy! I want to book a doubt clearing session:
+Track: ${trackName}
+Subject: ${subjectName}
+Doubt Scope: ${scope}
+Estimated Charge: ₹${total}
+Please confirm mentor availability.`);
+
+      document.getElementById('atelierWaButton').href = `https://wa.me/916291374919?text=${waText}`;
+    }
+
+    function bookCalculatedSlot() {
+      const trackName = document.getElementById('atelierTrack').options[document.getElementById('atelierTrack').selectedIndex].text;
+      const subjectName = document.getElementById('atelierSubject').options[document.getElementById('atelierSubject').selectedIndex].text;
+      openBookingModal(`${trackName} - ${subjectName}`);
+    }
+
+    function openBookingModal(prefill = '') {
+      const modal = document.getElementById('bookingModal');
+      const topicInput = document.getElementById('formTopic');
+      const form = document.getElementById('bookingForm');
+      const success = document.getElementById('bookingSuccess');
+
+      form.classList.remove('hidden');
+      success.classList.add('hidden');
+
+      if (prefill && topicInput) {
+        topicInput.value = prefill;
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      document.getElementById('bookingForm').classList.add('hidden');
+      document.getElementById('bookingSuccess').classList.remove('hidden');
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
